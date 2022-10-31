@@ -8,6 +8,7 @@ cap = cv2.VideoCapture(1)
 detector = htm.handDetector()
 while True:
     success, img = cap.read()
+    img = cv2.flip(img, 1)
     img = detector.findHands(img)
     lmList = detector.findLms(img)
     if len(lmList) != 0:

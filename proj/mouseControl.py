@@ -1,4 +1,5 @@
-import cv2, time, numpy as np
+import cv2
+import time, numpy as np
 import module.HandTrackinMod as htm
 
 ##########################
@@ -18,4 +19,5 @@ while True:
     lmList = detector.findLms(img)
     if len(lmList) != 0:
         x, y = lmList[8][1], lmList[8][2]
+        print()
         
